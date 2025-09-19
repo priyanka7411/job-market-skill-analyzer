@@ -19,8 +19,9 @@ venv/
 .DS_Store
 chromedriver-mac-x64/
 
-# Ignore DuckDB database file
+# Ignore DuckDB database
 data/jobs.duckdb
 
 # Ignore Python virtual environment
 venv/
+
