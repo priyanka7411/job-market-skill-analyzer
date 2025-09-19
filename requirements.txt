@@ -1,0 +1,24 @@
+# Web Scraping
+playwright
+requests
+beautifulsoup4
+
+# Data Processing & DB
+pandas
+polars
+duckdb
+dbt-core
+
+# NLP
+spacy
+transformers
+
+# Visualization
+matplotlib
+plotly
+
+# Jupyter
+jupyter
+
+# Optional: Apache Superset (for dashboards)
+apache-superset
