@@ -1,5 +1,7 @@
 # Web Scraping
 playwright
+selenium
+
 requests
 beautifulsoup4
 
