@@ -1,8 +1,6 @@
 # Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 venv/
 .env
 
@@ -12,16 +10,9 @@ venv/
 # DuckDB
 *.duckdb
 
-# Logs
+# OS & Logs
+.DS_Store
 *.log
 
-# OS
-.DS_Store
+# Chrome driver
 chromedriver-mac-x64/
-
-# Ignore DuckDB database
-data/jobs.duckdb
-
-# Ignore Python virtual environment
-venv/
-
