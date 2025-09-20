@@ -1,0 +1,52 @@
+name: Refresh Job Data
+
+on:
+  schedule:
+    # Runs every Monday at 9:00 AM IST (3:30 AM UTC)
+    - cron: '30 3 * * 1'
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      #  Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      #  Set up Python 3.13
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      #  Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      #  Run scraper + processing + EDA with logging
+      - name: Run scraper and analysis
+        run: |
+          set -e  # exit if any command fails
+          echo " Starting scraping..."
+          python scripts/scraper.py || { echo 'Scraper failed'; exit 1; }
+          
+          echo " Creating raw jobs table..."
+          python scripts/create_raw_jobs.py || { echo 'Raw jobs creation failed'; exit 1; }
+          
+          echo "Preprocessing jobs..."
+          python scripts/preprocess_jobs.py || { echo 'Preprocessing failed'; exit 1; }
+          
+          echo " Running EDA..."
+          python analysis/eda_jobs.py || { echo 'EDA failed'; exit 1; }
+
+      #  Optional: Upload EDA charts as artifacts
+      - name: Upload EDA charts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: eda-charts
+          path: data/analysis  # Make sure your eda_jobs.py saves plots here
