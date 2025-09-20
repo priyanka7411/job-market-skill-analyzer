@@ -1,0 +1,51 @@
+skill,company,jobs
+business analysis,Accenture,80
+business analysis,Wipro,17
+business analysis,Amazon,17
+business analysis,Photon,13
+business analysis,TELUS Digital AI Data Solutions,9
+project management,Accenture,93
+project management,Wipro,27
+project management,TELUS Digital AI Data Solutions,12
+project management,Amazon,9
+project management,Photon,6
+data analysis,Accenture,23
+data analysis,TELUS Digital AI Data Solutions,16
+data analysis,Amazon,15
+data analysis,Wipro,8
+data analysis,Jones Lang LaSalle Property Consultants (India) Pv t. Ltd.,6
+analytical,Amazon,28
+analytical,Photon,7
+analytical,Deloitte Consulting,7
+analytical,EY,6
+analytical,Center Study Science Technology Policy,6
+sql,Accenture,15
+sql,Amazon,8
+sql,TE Connectivity,4
+sql,Meesho,3
+sql,"NTT DATA, Inc.",3
+agile,Accenture,13
+agile,Photon,9
+agile,EY,7
+agile,Amazon,5
+agile,Equiniti India,4
+python,Accenture,14
+python,TELUS Digital AI Data Solutions,14
+python,Jones Lang LaSalle Property Consultants (India) Pv t. Ltd.,5
+python,Capco,4
+python,Wipro,3
+business analyst,Amazon,15
+business analyst,Laminaar Aviation Infotech,8
+business analyst,Photon,6
+business analyst,Wipro,5
+business analyst,KPMG India,4
+financial analysis,Amazon,12
+financial analysis,Wipro,9
+financial analysis,Accenture,7
+financial analysis,Grant Thornton,3
+financial analysis,"NTT DATA, Inc.",2
+analysis,Peroptyx,5
+analysis,Zensar,3
+analysis,Amazon,3
+analysis,EXL,2
+analysis,CDW India It Solutions,2
